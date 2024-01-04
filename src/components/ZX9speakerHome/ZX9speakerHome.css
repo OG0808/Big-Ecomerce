@@ -1,0 +1,79 @@
+.ZX9speakerHome {
+  width: 1110px;
+  height: 560px;
+  flex-shrink: 0;
+  background: var(--color3);
+  margin: 0 auto;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  display: flex;
+}
+
+.ZX9speakerHome__images {
+  position: relative;
+  z-index: 1;
+}
+
+.ZX9speakerHome__img {
+  object-fit: contain;
+  width: 410.234px;
+  height: 493px;
+  margin-left: 125px;
+  margin-top: 80px;
+  z-index: 5;
+}
+
+.ZX9speakerHome__pattern {
+  width: 954px;
+  height: 954px;
+  z-index: -1;
+  position: absolute;
+  top: -25px;
+  left: -150px;
+}
+
+.ZX9speakerHome__content {
+  width: 349px;
+  height: 303px;
+  flex-shrink: 0;
+  margin-left: 130px;
+  margin-top: 110px;
+}
+
+.ZX9speakerHome__title {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 58px; /* 103.571% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.ZX9speakerHome__description {
+  width: 349px;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 166.667% */
+  opacity: 0.75;
+  margin-bottom: 40px;
+}
+.ZX9speakerHome__button {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 160px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #000;
+}

@@ -1,0 +1,45 @@
+.ZX7speakers {
+  background-image: url("../../assets/home/desktop/image-speaker-zx7.jpg");
+  max-width: 1110px;
+  width: 100%;
+  height: 320px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  justify-content: center;
+}
+.ZX7speakers__title {
+  color: var(--color2);
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 110px;
+}
+
+.ZX7speakers__button {
+  color: var(--color2);
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 160px;
+  height: 48px;
+  margin-left: 110px;
+  cursor: pointer;
+}
+
+.ZX7speakers__button:hover {
+  background-color: var(--color1);
+  color: var(--color6);
+}

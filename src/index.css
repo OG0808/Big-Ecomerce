@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color1:#101010;
+  --color2:#000000;
+  --color3:#D87D4A;
+  --color4:#fbaf85;
+  --color5:#F1F1F1;
+  --color6:#FFFFFF;
+  --color7:#FAFAFA;
+  --max-width: 1110px;
+  --Manrope: 'Manrope', sans-serif;
+}
+
+
+body{
+  background: var(--color7);
+}
