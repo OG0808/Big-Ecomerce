@@ -4,7 +4,7 @@
   height: 729px;
   flex-shrink: 0;
   margin: 0 auto;
-  background-image: url("src/assets/home/desktop/image-hero.jpg");
+  background-image: url("/home/desktop/image-hero.jpg");
   background-position: center;
   background-size: cover;
   display: flex;

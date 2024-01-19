@@ -7,10 +7,10 @@ const ZX9speakerHome = () => {
     <div className="ZX9speakerHome__images">
       <img
         className="ZX9speakerHome__img"
-        src="/src/assets/home/desktop/image-speaker-zx9.png"
+        src="/home/desktop/image-speaker-zx9.png"
         alt=""
       />
-      <img className="ZX9speakerHome__pattern" src="/src/assets/home/desktop/pattern-circles.svg" alt="" /> 
+      <img className="ZX9speakerHome__pattern" src="/home/desktop/pattern-circles.svg" alt="" /> 
     </div>
     <div className="ZX9speakerHome__content">
       <h2 className="ZX9speakerHome__title">ZX9 SPEAKER</h2>

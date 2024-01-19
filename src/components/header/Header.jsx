@@ -1,7 +1,6 @@
 // Header.jsx
 import React from "react";
-import Navbar from "../nabvar/Navbar";
-import "../header/header.css";
+import "./header.css";
 import Data from "../../../data.json";
 
 const Header = () => {
