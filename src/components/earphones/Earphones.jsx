@@ -3,12 +3,13 @@ import './earphone.css'
 import data from "../../../data.json";
 import PagesShop from '../pagesShop/PagesShop'
 import ListeningToMusic from "../manListeningToMusic/ListeningToMusic";
+import { useNavigate } from 'react-router-dom';
 
 
 const Earphones = () => {
+const navigate= useNavigate()
 
-
-    const headphones = data?.sort((a, b) => b.id - a.id).slice(5);
+  const headphones = data?.sort((a, b) => b.id - a.id).slice(5);
   return (
     <section className="earphones">
     <div className="earphones__title">
@@ -26,7 +27,7 @@ const Earphones = () => {
             {data.new && <div className="earphones__badge">NEW PRODUCT</div>}
             <h2 className="earphones__name">{data.name}</h2>
             <p className="earphones__description">{data.description}</p>
-            <button className="earphones__button">See Product</button>
+            <button onClick={()=>{navigate(`/product/${data.name}`)}} className="earphones__button">See Product</button>
           </div>
         </div>
       ))}

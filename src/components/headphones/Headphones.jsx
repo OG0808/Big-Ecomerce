@@ -27,7 +27,7 @@ const Headphones = () => {
               {data.new && <div className="headphones__badge">NEW PRODUCT</div>}
               <h2 className="headphones__name">{data.name}</h2>
               <p className="headphones__description">{data.description}</p>
-              <button onClick={()=>{navigate(data.route)}} className="headphones__button">See Product</button>
+              <button onClick={()=>{navigate(`/product/${data.name}`)}} className="headphones__button">See Product</button>
             </div>
           </div>
         ))}

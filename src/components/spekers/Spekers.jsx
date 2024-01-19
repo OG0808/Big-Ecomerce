@@ -3,9 +3,10 @@ import './spekers.css'
 import data from "../../../data.json";
 import PagesShop from '../pagesShop/PagesShop'
 import ListeningToMusic from "../manListeningToMusic/ListeningToMusic";
+import { useNavigate } from 'react-router-dom';
 
 const Spekers = () => {
-  
+  const navigate = useNavigate()
   const headphones = data?.sort((a, b) => b.id - a.id).slice(0, 2);
 
 
@@ -26,7 +27,7 @@ const Spekers = () => {
             {data.new && <div className="speakers__badge">NEW PRODUCT</div>}
             <h2 className="speakers__name">{data.name}</h2>
             <p className="speakers__description">{data.description}</p>
-            <button className="speakers__button">See Product</button>
+            <button onClick={()=>{navigate(`/product/${data.name}`)}} className="speakers__button">See Product</button>
           </div>
         </div>
       ))}
