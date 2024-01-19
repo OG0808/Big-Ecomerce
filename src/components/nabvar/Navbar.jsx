@@ -1,7 +1,11 @@
 import React from "react";
 import "../nabvar/nabvar.css";
 
+
 const Navbar = () => {
+
+
+
   return (
     <nav className="navbar">
       <div className="navbar__container">
@@ -14,7 +18,7 @@ const Navbar = () => {
         </ul>
         <img className="navbar__cart" src="./src/assets/shared/desktop/icon-cart.svg" alt="" />
       </div>
-      <div className="navbar__line">linea</div>
+      <div className="navbar__line"></div>
     </nav>
   );
 };

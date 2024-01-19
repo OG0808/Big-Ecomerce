@@ -5,6 +5,7 @@ import ZX9speakerHome from '../components/ZX9speakerHome/ZX9speakerHome'
 import ZX7speakers from '../components/ZX7speakersHome/ZX7speakers'
 import YX1earphones from '../components/YX1erphonesHome/YX1earphones'
 import ListeningToMusic from '../components/manListeningToMusic/ListeningToMusic'
+import Footer from '../components/footer/Footer'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
     <ZX7speakers/>
     <YX1earphones/>
     <ListeningToMusic/>
+    <Footer/>
     </div>
   )
 }
