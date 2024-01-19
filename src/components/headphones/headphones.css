@@ -1,15 +1,104 @@
-.headphones{
-   
+.headphones {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.imagendeprueba{
-    width: 100px;
-    height: 100px;
-  
+.headphones__title {
+  max-width: 1440px;
+  width: 100%;
+  height: 300px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 160px;
 }
 
-.headphones__images{
-    width: 100px;
-    height: 100px;
-    
+.headphones__title > h1{
+  color: #FFF;
+text-align: center;
+font-family: Manrope;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px; /* 110% */
+letter-spacing: 1.429px;
+text-transform: uppercase;
+}
+
+.headphones__list {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+
+.headphones__item:nth-child(even){
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.headphones__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 125px;
+}
+
+.headphones__badge {
+  color: #d87d4a;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.headphones__name {
+  max-width: 445px;
+  color: #000;
+  font-family: Manrope;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px; /* 110% */
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.headphones__description {
+  max-width: 445px;
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-bottom: 40px;
+}
+
+.headphones__button {
+  border: none;
+  width: 160px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #d87d4a;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.headphones__images {
+  width: 540px;
+  height: 560px;
+  flex-shrink: 0;
 }

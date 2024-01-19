@@ -41,5 +41,6 @@
 
 .ZX7speakers__button:hover {
   background-color: var(--color1);
-  color: var(--color6);
+  color: var(--color7);
+  border: none;
 }

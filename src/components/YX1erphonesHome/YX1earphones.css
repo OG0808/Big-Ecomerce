@@ -59,4 +59,5 @@
 .YX1earphones__button:hover{
     color: var(--color7);
     background-color: var(--color2);
+    border: none;
 }

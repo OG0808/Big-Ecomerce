@@ -1,9 +1,10 @@
 import React from "react";
 import "./nabvar.css";
+import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
-
+const navigate= useNavigate()
 
 
   return (
@@ -11,10 +12,10 @@ const Navbar = () => {
       <div className="navbar__container">
         <img className="navbar__logo" src="./logotipo.svg" alt="" />
         <ul className="navbar__menu">
-          <li className="navbar__item">HOME</li>
-          <li className="navbar__item">HEADPHONES</li>
-          <li className="navbar__item">SPEAKERS</li>
-          <li className="navbar__item">EARPHONES</li>
+          <li onClick={()=>{ navigate('/')}} className="navbar__item">HOME</li>
+          <li onClick={()=>{ navigate('/headphon')}} className="navbar__item">HEADPHONES</li>
+          <li onClick={()=>{ navigate("/spekers")}} className="navbar__item">SPEAKERS</li>
+          <li onClick={()=>{ navigate("/earphone")}} className="navbar__item">EARPHONES</li>
         </ul>
         <img className="navbar__cart" src="./shared/desktop/icon-cart.svg" alt="" />
       </div>
