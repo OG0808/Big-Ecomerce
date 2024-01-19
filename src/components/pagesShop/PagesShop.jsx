@@ -1,5 +1,5 @@
 import React from 'react'
- import '../pagesShop/pagesshop.css'
+ import './pagesShop.css'
 
 
 const PagesShop = () => {
