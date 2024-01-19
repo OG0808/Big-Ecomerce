@@ -95,6 +95,13 @@ text-transform: uppercase;
   line-height: normal;
   letter-spacing: 1px;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.headphones__button:hover{
+  transition: .3s;
+  background-color: var(--color4);
 }
 
 .headphones__images {

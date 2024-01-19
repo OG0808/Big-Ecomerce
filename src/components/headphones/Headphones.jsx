@@ -3,10 +3,12 @@ import "./headphones.css";
 import data from "../../../data.json";
 import PagesShop from '../pagesShop/PagesShop'
 import ListeningToMusic from "../manListeningToMusic/ListeningToMusic";
+import { useNavigate } from "react-router-dom";
 
 
 const Headphones = () => {
   const headphones = data?.sort((a, b) => b.id - a.id).slice(2, 5);
+  const navigate = useNavigate()
 
   return (
     <section className="headphones">
@@ -25,7 +27,7 @@ const Headphones = () => {
               {data.new && <div className="headphones__badge">NEW PRODUCT</div>}
               <h2 className="headphones__name">{data.name}</h2>
               <p className="headphones__description">{data.description}</p>
-              <button className="headphones__button">See Product</button>
+              <button onClick={()=>{navigate(data.route)}} className="headphones__button">See Product</button>
             </div>
           </div>
         ))}
