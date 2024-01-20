@@ -97,8 +97,14 @@
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
   }
   
+  .earphones__button:hover{
+    transition: .3s;
+    background: var(--color4);
+  }
   .earphones__images {
     width: 540px;
     height: 560px;

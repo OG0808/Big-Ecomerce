@@ -22,6 +22,10 @@
   height: 96px;
 }
 
+.navbar__logo{
+  cursor: pointer;
+}
+
 .navbar__menu {
   color: var(--color7);
   display: flex;

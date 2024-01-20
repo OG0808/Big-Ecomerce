@@ -1,14 +1,13 @@
 import React from "react";
 import "./headphones.css";
 import data from "../../../data.json";
-import PagesShop from '../pagesShop/PagesShop'
+import PagesShop from "../pagesShop/PagesShop";
 import ListeningToMusic from "../manListeningToMusic/ListeningToMusic";
-import { useNavigate } from "react-router-dom";
-
+import { handleSeeProduct } from "../../utils/handleSeeProduct";
 
 const Headphones = () => {
   const headphones = data?.sort((a, b) => b.id - a.id).slice(2, 5);
-  const navigate = useNavigate()
+  const { handleSee } = handleSeeProduct();
 
   return (
     <section className="headphones">
@@ -27,13 +26,20 @@ const Headphones = () => {
               {data.new && <div className="headphones__badge">NEW PRODUCT</div>}
               <h2 className="headphones__name">{data.name}</h2>
               <p className="headphones__description">{data.description}</p>
-              <button onClick={()=>{navigate(`/product/${data.name}`)}} className="headphones__button">See Product</button>
+              <button
+                onClick={() => {
+                  handleSee(data.name);
+                }}
+                className="headphones__button"
+              >
+                See Product
+              </button>
             </div>
           </div>
         ))}
       </article>
-      <PagesShop/>
-      <ListeningToMusic/>
+      <PagesShop />
+      <ListeningToMusic />
     </section>
   );
 };

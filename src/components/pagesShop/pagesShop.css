@@ -52,12 +52,14 @@
 }
 
 .pagesShop__page {
-  color: var(--color2);
-  font-family: var(--Manrope);
+ 
+  color: #000;
+  font-family: Manrope;
   font-size: 13px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.5;
   display: flex;

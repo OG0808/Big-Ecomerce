@@ -1,12 +1,16 @@
-// Header.jsx
+
 import React from "react";
 import "./header.css";
 import Data from "../../../data.json";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const targetId = 4;
   const products = Data.find((data) => data.id === targetId);
   const product = [products];
+  const productName = Data.slice(3, 4);
+  console.log(productName);
+  const navigate = useNavigate();
 
   return (
     <section className="header">
@@ -21,7 +25,7 @@ const Header = () => {
             </p>
           </div>
         ))}
-        <button className="header__button">See Product</button>
+        <button onClick={()=>{navigate(`/product/${productName[0].name}`)}} className="header__button">See Product</button>
       </article>
     </section>
   );

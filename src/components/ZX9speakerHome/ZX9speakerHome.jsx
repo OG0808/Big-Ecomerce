@@ -1,7 +1,12 @@
 import React from "react";
 import "../ZX9speakerHome/ZX9speakerHome.css";
+import { useNavigate } from "react-router-dom";
+import data from '../../../data.json'
 
 const ZX9speakerHome = () => {
+const product = data.slice(5, 6)
+const navigate = useNavigate()
+
   return (
     <section className="ZX9speakerHome">
     <div className="ZX9speakerHome__images">
@@ -18,7 +23,7 @@ const ZX9speakerHome = () => {
         Upgrade to premium speakers that are phenomenally built to deliver
         truly remarkable sound.
       </p>
-      <button className="ZX9speakerHome__button">SEE PRODUCT</button>
+      <button className="ZX9speakerHome__button" onClick={()=>{navigate(`/product/${product[0].name}`)}} >SEE PRODUCT</button>
     </div>
   </section>
   );

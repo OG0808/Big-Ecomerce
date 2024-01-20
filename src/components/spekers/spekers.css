@@ -96,6 +96,13 @@
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .speakers__button:hover{
+    transition: .3s;
+    background: var(--color4);
   }
   
   .speakers__images {

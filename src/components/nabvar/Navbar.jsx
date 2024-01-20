@@ -10,7 +10,7 @@ const navigate= useNavigate()
   return (
     <nav className="navbar">
       <div className="navbar__container">
-        <img className="navbar__logo" src="./logotipo.svg" alt="" />
+        <img onClick={()=>{ navigate('/')}} className="navbar__logo" src="./logotipo.svg" alt="" />
         <ul className="navbar__menu">
           <li onClick={()=>{ navigate('/')}} className="navbar__item">HOME</li>
           <li onClick={()=>{ navigate('/headphon')}} className="navbar__item">HEADPHONES</li>

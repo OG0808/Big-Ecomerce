@@ -60,7 +60,7 @@
     "others": [
       {
         "slug": "xx99-mark-one-headphones",
-        "name": "XX99 Mark I",
+        "name": "XX99 Mark I Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx99-mark-one-headphones.jpg",
           "tablet": "/shared/tablet/image-xx99-mark-one-headphones.jpg",
@@ -69,7 +69,7 @@
       },
       {
         "slug": "xx59-headphones",
-        "name": "XX59",
+        "name": "XX59 Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx59-headphones.jpg",
           "tablet": "/shared/tablet/image-xx59-headphones.jpg",
@@ -145,7 +145,7 @@
     "others": [
       {
         "slug": "xx99-mark-two-headphones",
-        "name": "XX99 Mark II",
+        "name": "XX99 Mark II Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx99-mark-two-headphones.jpg",
           "tablet": "/shared/tablet/image-xx99-mark-two-headphones.jpg",
@@ -154,11 +154,11 @@
       },
       {
         "slug": "xx99-mark-one-headphones",
-        "name": "XX99 Mark I",
+        "name": "XX99 Mark I Headphones",
         "image": {
-          "mobile": "/src/assets/shared/mobile/image-xx99-mark-one-headphones.jpg",
-          "tablet": "/src/assets/shared/tablet/image-xx99-mark-one-headphones.jpg",
-          "desktop": "/src/assets/shared/desktop/image-xx99-mark-one-headphones.jpg"
+          "mobile": "/shared/mobile/image-xx99-mark-one-headphones.jpg",
+          "tablet": "/shared/tablet/image-xx99-mark-one-headphones.jpg",
+          "desktop": "/shared/desktop/image-xx99-mark-one-headphones.jpg"
         }
       },
       {
@@ -230,7 +230,7 @@
     "others": [
       {
         "slug": "xx99-mark-two-headphones",
-        "name": "XX99 Mark II",
+        "name": "XX99 Mark II Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx99-mark-two-headphones.jpg",
           "tablet": "/shared/tablet/image-xx99-mark-two-headphones.jpg",
@@ -239,7 +239,7 @@
       },
       {
         "slug": "xx59-headphones",
-        "name": "XX59",
+        "name": "XX59 Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx59-headphones.jpg",
           "tablet": "/shared/tablet/image-xx59-headphones.jpg",
@@ -319,7 +319,7 @@
     "others": [
       {
         "slug": "xx99-mark-one-headphones",
-        "name": "XX99 Mark I",
+        "name": "XX99 Mark I Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx99-mark-one-headphones.jpg",
           "tablet": "/shared/tablet/image-xx99-mark-one-headphones.jpg",
@@ -328,7 +328,7 @@
       },
       {
         "slug": "xx59-headphones",
-        "name": "XX59",
+        "name": "XX59 Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx59-headphones.jpg",
           "tablet": "/shared/tablet/image-xx59-headphones.jpg",
@@ -416,7 +416,7 @@
       },
       {
         "slug": "xx99-mark-one-headphones",
-        "name": "XX99 Mark I",
+        "name": "XX99 Mark I Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx99-mark-one-headphones.jpg",
           "tablet": "/shared/tablet/image-xx99-mark-one-headphones.jpg",
@@ -425,7 +425,7 @@
       },
       {
         "slug": "xx59-headphones",
-        "name": "XX59",
+        "name": "XX59 Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx59-headphones.jpg",
           "tablet": "/shared/tablet/image-xx59-headphones.jpg",
@@ -504,7 +504,7 @@
       },
       {
         "slug": "xx99-mark-one-headphones",
-        "name": "XX99 Mark I",
+        "name": "XX99 Mark I Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx99-mark-one-headphones.jpg",
           "tablet": "/shared/tablet/image-xx99-mark-one-headphones.jpg",
@@ -513,7 +513,7 @@
       },
       {
         "slug": "xx59-headphones",
-        "name": "XX59",
+        "name": "XX59 Headphones",
         "image": {
           "mobile": "/shared/mobile/image-xx59-headphones.jpg",
           "tablet": "/shared/tablet/image-xx59-headphones.jpg",
