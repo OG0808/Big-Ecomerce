@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./product.css";
 import { useNavigate, useParams } from "react-router-dom";
 import data from "../../../data.json";
 import ListeningToMusic from "../manListeningToMusic/ListeningToMusic";
 import PagesShop from "../pagesShop/PagesShop";
 import { handleSeeProduct } from "../../utils/handleSeeProduct";
+import useCartStore from "../../store/cartStore";
 
 const Product = () => {
   const { name } = useParams();
   const navigate = useNavigate();
   const product = data.find((data) => data.name === name);
+  const { addItem, decreaseItem} = useCartStore();
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setCount(0);
+  }, [name]);
+
+  const handleAddItem = (product) => {
+    setCount(count + 1);
+    addItem(product);
+  };
+
+  const handleDecreaseItem = (product) => {
+    if (count > 0) {
+      setCount((prevCount) => prevCount - 1);
+      decreaseItem(product);
+    }
+  };
 
   const hadleBack = () => {
     if (name === "XX99 Mark II Headphones") navigate("/headphon");
@@ -26,7 +45,7 @@ const Product = () => {
       <div className="product__back">
         <span onClick={hadleBack}>Go Back</span>
       </div>
-      <article  className="product__container">
+      <article className="product__container">
         <img
           className="product__image"
           src={product?.image.desktop}
@@ -43,11 +62,26 @@ const Product = () => {
 
           <div className="product__quantity-controls">
             <div className="product__quantity-control">
-              <button className="product__quantity-btn">-</button>
-              <span className="product__quantity-count">0</span>
-              <button className="product__quantity-btn">+</button>
+              <button
+                onClick={() => handleDecreaseItem(product?.id )}
+                className="product__quantity-btn"
+              >
+                -
+              </button>
+              <span className="product__quantity-count">{count}</span>
+              <button
+                onClick={() => handleAddItem(product)}
+                className="product__quantity-btn"
+              >
+                +
+              </button>
             </div>
-            <button className="product__add-to-cart-btn">add to cart</button>
+            <button
+              onClick={() => handleAddItem(product)}
+              className="product__add-to-cart-btn"
+            >
+              add to cart
+            </button>
           </div>
         </div>
       </article>

@@ -5,7 +5,7 @@ import { handleSeeProduct } from '../../utils/handleSeeProduct'
 
 
 const PagesShop = () => {
-const navigate = useNavigate()
+
 
 const { handleSeeShop } = handleSeeProduct();
 

@@ -4,11 +4,12 @@ import facebook from "/shared/desktop/icon-facebook.svg";
 import instagram from "/shared/desktop/icon-instagram.svg";
 import twiter from "/shared/desktop/icon-twitter.svg";
 import "./footer.css";
+import { handleSeeProduct } from "../../utils/handleSeeProduct";
 
 const Footer = () => {
+  const { handleSeeShop } = handleSeeProduct();
   return (
     <section className="footer">
-
       <article className="footer__block-icon">
         <img src={logo} alt="Logo" className="footer__logo" />
         <p className="footer__text">
@@ -24,10 +25,18 @@ const Footer = () => {
 
       <article className="footer__block-social">
         <ul className="footer__list">
-          <li className="footer__item">Home</li>
-          <li className="footer__item">Headphones</li>
-          <li className="footer__item">Speakers</li>
-          <li className="footer__item">EARPHONES</li>
+          <li onClick={() => {
+            handleSeeShop("/");
+          }} className="footer__item">Home</li>
+          <li   onClick={() => {
+              handleSeeShop("/headphon");
+            }}  className="footer__item">Headphones</li>
+          <li  onClick={() => {
+              handleSeeShop("/spekers");
+            }} className="footer__item">Speakers</li>
+          <li onClick={() => {
+              handleSeeShop("/earphone");
+            }} className="footer__item">EARPHONES</li>
         </ul>
         <ul className="footer__list-icon">
           <img src={facebook} alt="icono facebook" />
