@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const useCartShow = create((set) => ({
-  show: true,
+  show: false,
 
   setShowCart: () => set((state) => ({ show: !state.show }))
 

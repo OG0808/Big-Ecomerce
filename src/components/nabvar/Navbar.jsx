@@ -79,6 +79,7 @@ const Navbar = () => {
               Remove all
             </span>
           </h3>
+         
           {cartProducts?.map((data) => (
             <div class="cart__product">
               <img class="cart__product__image" src={data.image?.mobile} alt="" />
@@ -105,6 +106,7 @@ const Navbar = () => {
               </div>
             </div>
           ))}
+          
         </div>
           <div className="cart__total-price">
            <span className="cart__total">TOTAL</span>
