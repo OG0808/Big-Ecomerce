@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./nabvar.css";
-import { useNavigate } from "react-router-dom";
+
 import useCartStore from "../../store/cartStore";
 import useCartShow from "../../store/useCartShow";
 import { handleSeeProduct } from "../../utils/handleSeeProduct";
 
 const Navbar = () => {
- const { show, setShowCart }=useCartShow()
-  
-  const { cartProducts, clearCart, addItem, decreaseItem, totalPrice } = useCartStore();
-  const { handleSeeShop } = handleSeeProduct();
+  const { show, setShowCart } = useCartShow();
 
+  const { cartProducts, clearCart, addItem, decreaseItem, totalPrice } =
+    useCartStore();
+  const { handleSeeShop } = handleSeeProduct();
 
   return (
     <nav className="navbar">
@@ -58,47 +58,50 @@ const Navbar = () => {
           </li>
         </ul>
         <img
-        onClick={()=>{setShowCart(!false)}}
+          onClick={() => {
+            setShowCart(!false);
+          }}
           className="navbar__cart"
           src="./shared/desktop/icon-cart.svg"
           alt=""
-          />
+        />
       </div>
       <div className="navbar__line"></div>
-      
-      
-       <div className={show?"cartBackgound":''}>
-  
-        </div>
 
-      <section class={show ? 'cart' : 'cartHiden'}>
-        <div class="cart__container">
-          <h3 class="cart__title">
+      <div className={show ? "cartBackgound" : ""}></div>
+
+      <section class={show ? "cart" : "cartHiden"}>
+        <div className="cart__container">
+          <h3 className="cart__title">
             {`Cart (${cartProducts.length})`}
-            <span class="cart__clear" onClick={clearCart}>
+            <span className="cart__clear" onClick={clearCart}>
               Remove all
             </span>
           </h3>
-         
+
           {cartProducts?.map((data) => (
-            <div class="cart__product">
-              <img class="cart__product__image" src={data.image?.mobile} alt="" />
-              <div class="cart__product__info">
-                <span class="cart__product__name">{data.name}</span>
-                <span class="cart__product__price">$ {data.price}</span>
+            <div className="cart__product">
+              <img
+                className="cart__product__image"
+                src={data.image?.mobile}
+                alt=""
+              />
+              <div className="cart__product__info">
+                <span className="cart__product__name">{data.name}</span>
+                <span className="cart__product__price">$ {data.price}</span>
               </div>
-              <div class="cart__product__quantity">
-                <div class="cart__quantity__control">
+              <div className="cart__product__quantity">
+                <div className="cart__quantity__control">
                   <button
                     onClick={() => decreaseItem(data?.id)}
-                    class="cart__quantity__btn quantity__btn--decrease"
+                    className="cart__quantity__btn quantity__btn--decrease"
                   >
                     -
                   </button>
-                  <span class="cart__quantity__count">{data.quantity}</span>
+                  <span className="cart__quantity__count">{data.quantity}</span>
                   <button
                     onClick={() => addItem(data)}
-                    class="cart__quantity__btn quantity__btn--increase"
+                    className="cart__quantity__btn quantity__btn--increase"
                   >
                     +
                   </button>
@@ -106,15 +109,20 @@ const Navbar = () => {
               </div>
             </div>
           ))}
-          
         </div>
-          <div className="cart__total-price">
-           <span className="cart__total">TOTAL</span>
-           <span>
-            ${totalPrice}
-           </span>
-          </div>
-        <button className="cart__checkout">checkout</button>
+        <div className="cart__total-price">
+          <span className="cart__total">TOTAL</span>
+          <span>${totalPrice}</span>
+        </div>
+        <button
+          onClick={() => {
+            handleSeeShop("/checkout");
+            setShowCart(!false);
+          }}
+          className="cart__checkout"
+        >
+          checkout
+        </button>
       </section>
     </nav>
   );

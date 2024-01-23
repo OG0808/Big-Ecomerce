@@ -13,10 +13,11 @@ const Product = () => {
   const product = data.find((data) => data.name === name);
   const { addItem, decreaseItem} = useCartStore();
   const [count, setCount] = useState(0);
+  const [check, setCheck] = useState(false)
 
   useEffect(() => {
     setCount(0);
-  }, [name]);
+  }, [name, check]);
 
   const handleAddItem = (product) => {
     setCount(count + 1);
@@ -77,7 +78,7 @@ const Product = () => {
               </button>
             </div>
             <button
-              onClick={() => handleAddItem(product)}
+              onClick={() => setCheck(!check)}
               className="product__add-to-cart-btn"
             >
               add to cart

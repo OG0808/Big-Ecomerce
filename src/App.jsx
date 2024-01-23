@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer.jsx";
 import SpekersPages from "./pages/SpekersPages.jsx";
 import EarphonesPage from "./pages/EarphonesPage.jsx";
 import Product from "./components/productShop/Product.jsx";
+import Checkout from "./components/checkout/Checkout.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/spekers" element={<SpekersPages/>}/>
         <Route path="/earphone" element={<EarphonesPage/>}/>
         <Route path="/product/:name" element={<Product/>}/>
+        <Route path="/checkout" element={<Checkout/>}/>
       </Routes>
       <Footer/>
     </main>
