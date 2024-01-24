@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import "./nabvar.css";
 
 import useCartStore from "../../store/cartStore";
@@ -70,7 +70,7 @@ const Navbar = () => {
 
       <div className={show ? "cartBackgound" : ""}></div>
 
-      <section class={show ? "cart" : "cartHiden"}>
+      <section className={show ? "cart" : "cartHiden"}>
         <div className="cart__container">
           <h3 className="cart__title">
             {`Cart (${cartProducts.length})`}
@@ -80,7 +80,7 @@ const Navbar = () => {
           </h3>
 
           {cartProducts?.map((data) => (
-            <div className="cart__product">
+            <div key={data.id} className="cart__product">
               <img
                 className="cart__product__image"
                 src={data.image?.mobile}

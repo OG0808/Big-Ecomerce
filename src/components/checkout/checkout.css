@@ -1,3 +1,290 @@
-.formulario{
-    margin: 20rem;
+.checkout {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: Manrope;
+  gap: 30px;
+  margin: 146px 0px 141px 0px;
+}
+
+.checkout > form {
+  width: 100%;
+  border-radius: 8px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+  gap: 53px;
+  padding-bottom: 48px;
+  padding-top: 54px;
+}
+
+.container__form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  padding: 33px;
+  gap: 3rem;
+}
+
+.formulario--checkout {
+  max-width: 730px;
+  width: 100%;
+}
+
+.formulario__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario__group1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario__grupo2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario__title {
+  color: #d87d4a;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 192.308% */
+  letter-spacing: 0.929px;
+  text-transform: uppercase;
+}
+
+.formulario__field {
+  display: flex;
+  gap: 1rem;
+}
+
+.formulario__field2 {
+  gap: 229px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.formulario__subfield {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.formulario__label {
+  color: #000;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.214px;
+}
+
+.formulario__input {
+  width: 309px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  padding-left: 1rem;
+  font-family: Manrope;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.formulario__inputbig {
+  max-width: 634px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  padding-left: 1rem;
+  font-family: Manrope;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.formulario__input::placeholder {
+  color: #000;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  opacity: 0.4;
+}
+
+.errors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.checkbox__input {
+  border-radius: 50%;
+}
+
+.sumary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 350px;
+  flex-shrink: 0;
+  padding: 33px;
+  border-radius: 8px;
+  background: #fff;
+
+}
+
+.sumary__title {
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.286px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.suamry__container-product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.suamry__product > img {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #f1f1f1;
+}
+.suamry__product {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sumary__namePrice {
+  display: flex;
+  flex-direction: column;
+}
+
+.sumary__price {
+  color: #000;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+.sumary__name {
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.sumary__total {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sumary__total > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.suamry__valors-description {
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+.sumary__valors {
+  color: #000;
+  text-align: right;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.suamry__btn {
+  width: 100%;
+  height: 48px;
+  flex-shrink: 0;
+  background: #d87d4a;
+  color: #fff;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.suamry__btn:hover {
+  background: var(--color4);
+  transition: 0.3s;
+}
+.grandTotal {
+  color: #d87d4a;
+  text-align: right;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
 }

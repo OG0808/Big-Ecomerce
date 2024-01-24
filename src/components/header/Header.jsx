@@ -9,7 +9,7 @@ const Header = () => {
   const products = Data.find((data) => data.id === targetId);
   const product = [products];
   const productName = Data.slice(3, 4);
-  console.log(productName);
+ 
   const navigate = useNavigate();
 
   return (
