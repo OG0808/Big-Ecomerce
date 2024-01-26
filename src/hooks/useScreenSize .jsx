@@ -17,7 +17,7 @@ const useScreenSize = () => {
     setHeight(window.innerHeight);
   };
 
-  console.log(width);
+
 
   return { width, height };
 };

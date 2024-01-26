@@ -1,6 +1,6 @@
 import React from "react";
 import "./ZX7speakers.css";
-import { useNavigate } from "react-router-dom";
+
 import data from "../../../data.json";
 import { handleSeeProduct } from "../../utils/handleSeeProduct";
 

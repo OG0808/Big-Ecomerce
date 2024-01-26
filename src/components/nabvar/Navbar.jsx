@@ -1,6 +1,4 @@
-
 import "./nabvar.css";
-
 import useCartStore from "../../store/cartStore";
 import useCartShow from "../../store/useCartShow";
 import { handleSeeProduct } from "../../utils/handleSeeProduct";
@@ -15,14 +13,22 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__container">
-        <img
-          onClick={() => {
-            handleSeeShop("/");
-          }}
-          className="navbar__logo"
-          src="./logotipo.svg"
-          alt=""
-        />
+        <div className="navbar__content-icon-logo">
+          <img
+            className="navbar__icon-menu"
+            src="/shared/tablet/icon-hamburger.svg"
+            alt=""
+          />
+
+          <img
+            onClick={() => {
+              handleSeeShop("/");
+            }}
+            className="navbar__logo"
+            src="./logotipo.svg"
+            alt=""
+          />
+        </div>
         <ul className="navbar__menu">
           <li
             onClick={() => {
@@ -69,7 +75,6 @@ const Navbar = () => {
       <div className="navbar__line"></div>
 
       <div className={show ? "cartBackgound" : ""}></div>
-
       <section className={show ? "cart" : "cartHiden"}>
         <div className="cart__container">
           <h3 className="cart__title">

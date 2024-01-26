@@ -13,6 +13,7 @@ const arrow = "/shared/desktop/icon-arrow-right.svg"
     
   return (
     <section className='pagesShop'>
+
     <div className='pagesShop__content'>
 
       <div className='pagesShop__item'>
@@ -35,6 +36,7 @@ const arrow = "/shared/desktop/icon-arrow-right.svg"
       </div>
 
     </div>
+    
   </section>
   )
 }
