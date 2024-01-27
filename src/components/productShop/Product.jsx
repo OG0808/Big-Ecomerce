@@ -9,6 +9,8 @@ import useScreenSize from "../../hooks/useScreenSize ";
 const Product = () => {
   const { width } = useScreenSize();
   const { name } = useParams();
+
+  console.log(name);
   const {
     hadleBack,
     setCheck,
@@ -23,6 +25,7 @@ const Product = () => {
 
   return (
     <section className="product">
+
       <article className="product__container__back">
         <div className="product__back">
           <span onClick={hadleBack}>Go Back</span>
@@ -142,7 +145,14 @@ const Product = () => {
           {product?.others.map((others) => (
             <div key={others.name} className="other__product-item">
               <img
-                src={others.image.desktop}
+                src={
+                  width > 768
+                  ? others.image.desktop
+                  : width > 375
+                  ? others.image.tablet
+                  : others.image.mobile
+  
+                  }
                 alt={others.name}
                 className="other__product-image"
               />
@@ -159,9 +169,11 @@ const Product = () => {
           ))}
         </div>
       </article>
-
+      <div className="product__pages">
+        
       <PagesShop />
       <ListeningToMusic />
+      </div>
     </section>
   );
 };

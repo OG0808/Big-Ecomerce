@@ -27,7 +27,7 @@ const Footer = () => {
           </li>
           <li
             onClick={() => {
-              handleSeeShop("/headphon");
+              handleSeeShop("/productcatalog/headphones");
             }}
             className="footer__item"
           >
@@ -35,7 +35,7 @@ const Footer = () => {
           </li>
           <li
             onClick={() => {
-              handleSeeShop("/spekers");
+              handleSeeShop("/productcatalog/speakers");
             }}
             className="footer__item"
           >
@@ -43,7 +43,7 @@ const Footer = () => {
           </li>
           <li
             onClick={() => {
-              handleSeeShop("/earphone");
+              handleSeeShop("/productcatalog/earphones");
             }}
             className="footer__item"
           >

@@ -28,12 +28,12 @@ const handleproductShop = (name) => {
   const { handleSee } = handleSeeProduct();
 
   const hadleBack = () => {
-    if (name === "XX99 Mark II Headphones") navigate("/headphon");
-    if (name === "XX99 Mark I Headphones") navigate("/headphon");
-    if (name === "XX59 Headphones") navigate("/headphon");
-    if (name === "ZX9 Speaker") navigate("/spekers");
-    if (name === "ZX7 Speaker") navigate("/spekers");
-    if (name === "YX1 Wireless Earphones") navigate("/earphone");
+    if (name === "XX99 Mark II Headphones") navigate("/productcatalog/headphones");
+    if (name === "XX99 Mark I Headphones") navigate("/productcatalog/headphones");
+    if (name === "XX59 Headphones") navigate("/productcatalog/headphones");
+    if (name === "ZX9 Speaker") navigate("/productcatalog/speakers");
+    if (name === "ZX7 Speaker") navigate("/productcatalog/speakers");
+    if (name === "YX1 Wireless Earphones") navigate("/productcatalog/earphones");
   };
   return {
     hadleBack,

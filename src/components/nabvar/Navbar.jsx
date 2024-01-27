@@ -2,10 +2,14 @@ import "./nabvar.css";
 import useCartStore from "../../store/cartStore";
 import useCartShow from "../../store/useCartShow";
 import { handleSeeProduct } from "../../utils/handleSeeProduct";
+import PagesShop from "../pagesShop/PagesShop";
 
 const Navbar = () => {
-  const { show, setShowCart } = useCartShow();
-
+  
+  
+  const { show, setShowCart, setShowMenu, showMenu } = useCartShow();
+  
+  
   const { cartProducts, clearCart, addItem, decreaseItem, totalPrice } =
     useCartStore();
   const { handleSeeShop } = handleSeeProduct();
@@ -15,6 +19,7 @@ const Navbar = () => {
       <div className="navbar__container">
         <div className="navbar__content-icon-logo">
           <img
+            onClick={() => setShowMenu()}
             className="navbar__icon-menu"
             src="/shared/tablet/icon-hamburger.svg"
             alt=""
@@ -64,10 +69,10 @@ const Navbar = () => {
             EARPHONES
           </li>
         </ul>
-      
+
         <img
           onClick={() => {
-            setShowCart(!false);
+            setShowCart();
           }}
           className="navbar__cart"
           src="./shared/desktop/icon-cart.svg"
@@ -76,62 +81,74 @@ const Navbar = () => {
       </div>
       <div className="navbar__line"></div>
 
-      <div className={show ? "cartBackgound" : ""}></div>
+      <div className={show || showMenu ? "cartBackgound" : ""}></div>
       <div className="navbar__cart-content">
-      <section className={show ? "cart" : "cartHiden"}>
-        <div className="cart__container">
-          <h3 className="cart__title">
-            {`Cart (${cartProducts.length})`}
-            <span className="cart__clear" onClick={clearCart}>
-              Remove all
-            </span>
-          </h3>
+        <section className={show ? "cart" : "cartHiden"}>
+          <div className="cart__container">
+            <h3 className="cart__title">
+              {`Cart (${cartProducts.length})`}
+              <span className="cart__clear" onClick={clearCart}>
+                Remove all
+              </span>
+            </h3>
 
-          {cartProducts?.map((data) => (
-            <div key={data.id} className="cart__product">
-              <img
-                className="cart__product__image"
-                src={data.image?.mobile}
-                alt=""
-              />
-              <div className="cart__product__info">
-                <span className="cart__product__name">{data.name}</span>
-                <span className="cart__product__price">$ {data.price}</span>
-              </div>
-              <div className="cart__product__quantity">
-                <div className="cart__quantity__control">
-                  <button
-                    onClick={() => decreaseItem(data?.id)}
-                    className="cart__quantity__btn quantity__btn--decrease"
-                  >
-                    -
-                  </button>
-                  <span className="cart__quantity__count">{data.quantity}</span>
-                  <button
-                    onClick={() => addItem(data)}
-                    className="cart__quantity__btn quantity__btn--increase"
-                  >
-                    +
-                  </button>
+            {cartProducts?.map((data) => (
+              <div key={data.id} className="cart__product">
+                <img
+                  className="cart__product__image"
+                  src={data.image?.mobile}
+                  alt=""
+                />
+                <div className="cart__product__info">
+                  <span className="cart__product__name">{data.name}</span>
+                  <span className="cart__product__price">$ {data.price}</span>
+                </div>
+                <div className="cart__product__quantity">
+                  <div className="cart__quantity__control">
+                    <button
+                      onClick={() => decreaseItem(data?.id)}
+                      className="cart__quantity__btn quantity__btn--decrease"
+                    >
+                      -
+                    </button>
+                    <span className="cart__quantity__count">
+                      {data.quantity}
+                    </span>
+                    <button
+                      onClick={() => addItem(data)}
+                      className="cart__quantity__btn quantity__btn--increase"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="cart__total-price">
-          <span className="cart__total">TOTAL</span>
-          <span>${totalPrice}</span>
-        </div>
-        <button
-          onClick={() => {
-            handleSeeShop("/checkout");
-            setShowCart(!false);
-          }}
-          className="cart__checkout"
+            ))}
+          </div>
+          <div className="cart__total-price">
+            <span className="cart__total">TOTAL</span>
+            <span>${totalPrice}</span>
+          </div>
+          <button
+            onClick={() => {
+              handleSeeShop("/checkout");
+              setShowCart(!false);
+            }}
+            className="cart__checkout"
+          >
+            checkout
+          </button>
+        </section>
+      </div>
+
+      <div className="navbar__burger-content">
+        <div
+          className={
+            showMenu ? "navbar__burger-menu" : "navbar__burger-menuHide"
+          }
         >
-          checkout
-        </button>
-      </section>
+          <PagesShop />
+        </div>
       </div>
     </nav>
   );

@@ -18,6 +18,7 @@ const{  pageProduct }=handleProductCatalog(page)
       <div className="headphones__title">
         <h1>HEADPHONES</h1>
       </div>
+      <div className='headphones__contentall'>
       <article className="headphones__list">
         {pageProduct?.map((data) => (
           <div key={data.id} className="headphones__item">
@@ -50,6 +51,7 @@ const{  pageProduct }=handleProductCatalog(page)
       </article>
       <PagesShop />
       <ListeningToMusic />
+      </div>
     </section>
   );
 };

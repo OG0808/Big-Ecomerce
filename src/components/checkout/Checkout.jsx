@@ -5,7 +5,6 @@ import { validationSchema } from "../validation/Validation";
 import useCartStore from "../../store/cartStore";
 
 const Checkout = () => {
-
   const { cartProducts, totalPrice } = useCartStore();
   const iva = (totalPrice * 20) / 100;
   const GrandTotal = totalPrice + 50;
@@ -15,7 +14,7 @@ const Checkout = () => {
     register,
     formState: { errors },
   } = useForm({
-      resolver: yupResolver(validationSchema),
+    resolver: yupResolver(validationSchema),
     defaultValues: {
       Name: "Alexei Ward",
       email: "alexei@mail.com",
@@ -30,14 +29,10 @@ const Checkout = () => {
     },
   });
 
-  const Submit = (data) => {
-   
-  };
-
+  const Submit = (data) => {};
 
   return (
     <section className="checkout">
-
       <form
         onSubmit={handleSubmit(Submit)}
         className="formulario formulario--checkout"
@@ -166,7 +161,7 @@ const Checkout = () => {
             <p className="formulario__title">payment details</p>
             <div className="formulario__field2">
               <span className="formulario__label">Payment Method</span>
-              {/* <div className="formulario__subfield">
+              <div className="formulario__subfield">
                 <div className="formulario__input checkbox">
                   <input
                     {...register("payment_e-Money")}
@@ -183,7 +178,7 @@ const Checkout = () => {
                   />
                   <span className="formulario__label">Cash on Delivery</span>
                 </div>
-              </div> */}
+              </div>
             </div>
 
             <div className="formulario__field">
@@ -260,8 +255,6 @@ const Checkout = () => {
           </div>
         </article>
       </form>
-
-     
     </section>
   );
 };

@@ -2,15 +2,16 @@
 import React from "react";
 import "./header.css";
 import Data from "../../../data.json";
-import { useNavigate } from "react-router-dom";
+
+import { handleSeeProduct } from "../../utils/handleSeeProduct";
 
 const Header = () => {
   const targetId = 4;
   const products = Data.find((data) => data.id === targetId);
   const product = [products];
   const productName = Data.slice(3, 4);
- 
-  const navigate = useNavigate();
+
+  const{handleSee}=handleSeeProduct()
 
   return (
     <section className="header">
@@ -25,7 +26,7 @@ const Header = () => {
             </p>
           </div>
         ))}
-        <button onClick={()=>{navigate(`/product/${productName[0].name}`)}} className="header__button">See Product</button>
+        <button onClick={()=>{handleSee(`${productName[0].name}`)}} className="header__button">See Product</button>
       </article>
     </section>
   );

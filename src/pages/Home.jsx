@@ -9,14 +9,13 @@ import ListeningToMusic from '../components/manListeningToMusic/ListeningToMusic
 
 const Home = () => {
   return (
-    <div >
+    <div className='home__content'>
     <Header/>
     <PagesShop/>
     <ZX9speakerHome/>
     <ZX7speakers/>
     <YX1earphones/>
     <ListeningToMusic/>
-   
     </div>
   )
 }

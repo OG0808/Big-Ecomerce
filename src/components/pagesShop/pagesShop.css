@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 .pagesShop {
-
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 572px;
- 
 }
+
 
 .pagesShop__content {
   max-width: var(--max-width);
@@ -73,6 +71,19 @@
 
 .pagesShop__page:hover {
   color: var(--color3);
+}
+
+
+@media (width>768px){
+  .pagesShop {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+  
 }
 
 @media (width<=768px) {
