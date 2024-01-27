@@ -29,6 +29,7 @@ const Navbar = () => {
             alt=""
           />
         </div>
+
         <ul className="navbar__menu">
           <li
             onClick={() => {
@@ -40,7 +41,7 @@ const Navbar = () => {
           </li>
           <li
             onClick={() => {
-              handleSeeShop("/headphon");
+              handleSeeShop("/productcatalog/headphones");
             }}
             className="navbar__item"
           >
@@ -48,7 +49,7 @@ const Navbar = () => {
           </li>
           <li
             onClick={() => {
-              handleSeeShop("/spekers");
+              handleSeeShop("/productcatalog/speakers");
             }}
             className="navbar__item"
           >
@@ -56,13 +57,14 @@ const Navbar = () => {
           </li>
           <li
             onClick={() => {
-              handleSeeShop("/earphone");
+              handleSeeShop("/productcatalog/earphones");
             }}
             className="navbar__item"
           >
             EARPHONES
           </li>
         </ul>
+      
         <img
           onClick={() => {
             setShowCart(!false);
@@ -75,6 +77,7 @@ const Navbar = () => {
       <div className="navbar__line"></div>
 
       <div className={show ? "cartBackgound" : ""}></div>
+      <div className="navbar__cart-content">
       <section className={show ? "cart" : "cartHiden"}>
         <div className="cart__container">
           <h3 className="cart__title">
@@ -129,6 +132,7 @@ const Navbar = () => {
           checkout
         </button>
       </section>
+      </div>
     </nav>
   );
 };

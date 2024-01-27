@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 .pagesShop {
-  background: var(--color7);
+
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
@@ -117,3 +117,47 @@
     text-transform: uppercase;
   }
 }
+
+/* @media(width<=375px){
+  .pagesShop__content {
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    background: red;
+  }
+  .pagesShop__item {
+    text-align: center;
+    width: 223px;
+    height: 165px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--color5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .pagesShop__image {
+    position: absolute;
+    left: 25%;
+    top: -17%;
+    height: 104px;
+   
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+  .pagesShop__description {
+    color: var(--color2);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.071px;
+    text-transform: uppercase;
+  }
+} */

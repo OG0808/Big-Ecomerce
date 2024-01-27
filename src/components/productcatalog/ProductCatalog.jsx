@@ -1,13 +1,17 @@
-import React from "react";
-import "./headphones.css";
-import data from "../../../data.json";
+
+import './productcatalog.css'
 import PagesShop from "../pagesShop/PagesShop";
 import ListeningToMusic from "../manListeningToMusic/ListeningToMusic";
 import { handleSeeProduct } from "../../utils/handleSeeProduct";
+import useScreenSize from "../../hooks/useScreenSize ";
+import { useParams } from 'react-router-dom';
+import handleProductCatalog from '../../utils/handleProductCatalog';
 
 const Headphones = () => {
-  const headphones = data?.sort((a, b) => b.id - a.id).slice(2, 5);
+ const{page}= useParams()
+const{  pageProduct }=handleProductCatalog(page)
   const { handleSee } = handleSeeProduct();
+  const { width } = useScreenSize();
 
   return (
     <section className="headphones">
@@ -15,11 +19,17 @@ const Headphones = () => {
         <h1>HEADPHONES</h1>
       </div>
       <article className="headphones__list">
-        {headphones?.map((data) => (
+        {pageProduct?.map((data) => (
           <div key={data.id} className="headphones__item">
             <img
               className="headphones__images"
-              src={data.image.desktop}
+              src={
+                width > 768
+                  ? data.categoryImage.desktop
+                  : width > 375
+                  ? data.categoryImage.tablet
+                  : data.categoryImage.mobile
+              }
               alt=""
             />
             <div className="headphones__details">

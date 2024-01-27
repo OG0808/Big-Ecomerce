@@ -1,88 +1,76 @@
-import React, { useEffect, useState } from "react";
 import "./product.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import data from "../../../data.json";
 import ListeningToMusic from "../manListeningToMusic/ListeningToMusic";
 import PagesShop from "../pagesShop/PagesShop";
-import { handleSeeProduct } from "../../utils/handleSeeProduct";
-import useCartStore from "../../store/cartStore";
+import handleproductShop from "../../utils/handleproductShop";
+import useScreenSize from "../../hooks/useScreenSize ";
 
 const Product = () => {
+  const { width } = useScreenSize();
   const { name } = useParams();
-  const navigate = useNavigate();
+  const {
+    hadleBack,
+    setCheck,
+    handleAddItem,
+    handleDecreaseItem,
+    handleSee,
+    count,
+    check,
+  } = handleproductShop(name);
+  5;
   const product = data.find((data) => data.name === name);
-  const { addItem, decreaseItem} = useCartStore();
-  const [count, setCount] = useState(0);
-  const [check, setCheck] = useState(false)
 
-  useEffect(() => {
-    setCount(0);
-  }, [name, check]);
-
-  const handleAddItem = (product) => {
-    setCount(count + 1);
-    addItem(product);
-  };
-
-  const handleDecreaseItem = (product) => {
-    if (count > 0) {
-      setCount((prevCount) => prevCount - 1);
-      decreaseItem(product);
-    }
-  };
-
-  const hadleBack = () => {
-    if (name === "XX99 Mark II Headphones") navigate("/headphon");
-    if (name === "XX99 Mark I Headphones") navigate("/headphon");
-    if (name === "XX59 Headphones") navigate("/headphon");
-    if (name === "ZX9 Speaker") navigate("/spekers");
-    if (name === "ZX7 Speaker") navigate("/spekers");
-    if (name === "YX1 Wireless Earphones") navigate("/earphone");
-  };
-
-  const { handleSee } = handleSeeProduct();
   return (
     <section className="product">
-      <div className="product__back">
-        <span onClick={hadleBack}>Go Back</span>
-      </div>
-      <article className="product__container">
-        <img
-          className="product__image"
-          src={product?.image.desktop}
-          alt={product?.name}
-        />
+      <article className="product__container__back">
+        <div className="product__back">
+          <span onClick={hadleBack}>Go Back</span>
+        </div>
+        <div className="product__container">
+          <img
+            className="product__image"
+            src={
+              width > 768
+                ? product?.image.desktop
+                : width > 375
+                ? product?.image.tablet
+                : product?.image.mobile
+            }
+            alt={product?.name}
+          />
 
-        <div className="product__details">
-          <span className="product__tag">
-            {product?.new ? "NEW PRODUCT" : ""}
-          </span>
-          <h2 className="product__name">{product?.name}</h2>
-          <p className="product__description">{product?.description}</p>
-          <span className="product__price">$ {product?.price} USD</span>
+          <div className="product__details">
+            <span className="product__tag">
+              {product?.new ? "NEW PRODUCT" : ""}
+            </span>
+            <h2 className="product__name">{product?.name}</h2>
+            <p className="product__description">{product?.description}</p>
+            <span className="product__price">$ {product?.price} USD</span>
 
-          <div className="product__quantity-controls">
-            <div className="product__quantity-control">
+            <div className="product__quantity-controls">
+              <div className="product__quantity-control">
+                <button
+                  onClick={() => handleDecreaseItem(product?.id)}
+                  className="product__quantity-btn"
+                >
+                  -
+                </button>
+                <span className="product__quantity-count">{count}</span>
+                <button
+                  onClick={() => handleAddItem(product)}
+                  className="product__quantity-btn"
+                >
+                  +
+                </button>
+              </div>
               <button
-                onClick={() => handleDecreaseItem(product?.id )}
-                className="product__quantity-btn"
+                onClick={() => setCheck(!check)}
+                className="product__add-to-cart-btn"
               >
-                -
-              </button>
-              <span className="product__quantity-count">{count}</span>
-              <button
-                onClick={() => handleAddItem(product)}
-                className="product__quantity-btn"
-              >
-                +
+                add to cart
               </button>
             </div>
-            <button
-              onClick={() => setCheck(!check)}
-              className="product__add-to-cart-btn"
-            >
-              add to cart
-            </button>
           </div>
         </div>
       </article>
@@ -113,12 +101,36 @@ const Product = () => {
       <article className="product__images">
         <div className="product__image">
           <div className="product__image-firstandsecond">
-            <img src={product?.gallery.first.desktop} alt="" />
-            <img src={product?.gallery.second.desktop} alt="" />
+            <img
+              src={
+                width > 768
+                  ? product?.gallery.first.desktop
+                  : width > 375
+                  ? product?.gallery.first.tablet
+                  : product?.gallery.first.mobile
+              }
+              alt=""
+            />
+            <img
+              src={
+                width > 768
+                  ? product.gallery.second.desktop
+                  : width > 375
+                  ? product.gallery.second.tablet
+                  : product.gallery.second.mobile
+              }
+              alt=""
+            />
           </div>
           <img
             className="product__image-third"
-            src={product?.gallery.third.desktop}
+            src={
+              width > 768
+                ? product.gallery.third.desktop
+                : width > 375
+                ? product.gallery.third.tablet
+                : product.gallery.third.mobile
+            }
             alt=""
           />
         </div>
