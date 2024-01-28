@@ -80,7 +80,7 @@
 display: none;
 }
  
-@media (width<=768px) {
+@media (width<=1110px) {
   .footer {
     background: var(--color1);
     color: var(--fontcolor);

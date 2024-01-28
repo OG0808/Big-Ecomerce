@@ -61,7 +61,18 @@
   border: none;
 }
 
-@media (width<=768px) {
+@media(width<=768px){
+  .YX1earphones__image {
+    border-radius: 8px;
+    background-image: url("/home/tablet/image-earphones-yx1.jpg");
+    width: 540px;
+    height: 320px;
+    background-size: cover;
+  }
+
+}
+
+@media (width<=1110px) {
   .YX1earphones {
     max-width: 689px;
     width: 100%;
@@ -76,7 +87,7 @@
 
   .YX1earphones__image {
     border-radius: 8px;
-    background-image: url("/home/tablet/image-earphones-yx1.jpg");
+    background-image: url("/home/desktop/image-earphones-yx1.jpg");
     width: 540px;
     height: 320px;
     background-size: cover;

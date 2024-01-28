@@ -5,11 +5,8 @@ import { handleSeeProduct } from "../../utils/handleSeeProduct";
 import PagesShop from "../pagesShop/PagesShop";
 
 const Navbar = () => {
-  
-  
   const { show, setShowCart, setShowMenu, showMenu } = useCartShow();
-  
-  
+
   const { cartProducts, clearCart, addItem, decreaseItem, totalPrice } =
     useCartStore();
   const { handleSeeShop } = handleSeeProduct();
@@ -141,7 +138,7 @@ const Navbar = () => {
         </section>
       </div>
 
-      <div className="navbar__burger-content">
+      <div className={ showMenu ? "navbar__burger-content": "navbar__burger-contentHide" }>
         <div
           className={
             showMenu ? "navbar__burger-menu" : "navbar__burger-menuHide"

@@ -320,7 +320,7 @@
   transition: .3s;
 }
 
-@media (width<=768px) {
+@media (width<=1110px) {
   .checkout > form {
     width: 100%;
     display: flex;

@@ -16,6 +16,14 @@
   cursor: pointer;
 }
 
+.navbar__burger-contentHide{
+  display: none;
+}
+
+.navbar__burger-content{
+  display: none;
+}
+
 .navbar__container {
   max-width: 1110px;
   width: 100%;
@@ -30,9 +38,7 @@
 .navbar__cart {
   cursor: pointer;
 }
-.navbar__burger-content{
-  display: none;
-}
+
 
 .navbar__menu {
   color: var(--color7);
@@ -50,7 +56,7 @@
   animation: nav_menu 0.3s forwards;
 }
 
-@media (width<=768px) {
+@media (width<=1110px) {
   @keyframes nav_menu {
     to {
       display: none;
@@ -70,17 +76,29 @@
   animation: icon_menu 0.3s forwards;
 }
 
-@media (width<=768px) {
+@media (width<=1110px) {
   .navbar__icon-menu {
     display: block;
     animation: icon_menu 0.3s forwards;
   }
+
   .navbar__burger-content {
     display: block;
     padding: 1rem;
     width: 100%;
     position: absolute;
     top: 96px;
+  }
+
+  .navbar__burger-contentHide{
+    display: block;
+    top: 96px;
+    position: absolute;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: .3s step-end;
+    transform: translateX(-110%);
   }
   
   .navbar__burger-menu {
@@ -129,6 +147,8 @@
   z-index: -22;
 }
 
+
+
 .navbar__cart-content {
   max-width: 1110px;
   width: 100%;
@@ -138,8 +158,6 @@
   justify-content: flex-end;
   padding-left: 20px;
 }
-
-
 
 .cartHiden {
   right: 150px;

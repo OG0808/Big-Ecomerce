@@ -10,9 +10,9 @@ const Product = () => {
   const { width } = useScreenSize();
   const { name } = useParams();
 
-  console.log(name);
+  
   const {
-    hadleBack,
+    handleBack,
     setCheck,
     handleAddItem,
     handleDecreaseItem,
@@ -20,7 +20,7 @@ const Product = () => {
     count,
     check,
   } = handleproductShop(name);
-  5;
+  
   const product = data.find((data) => data.name === name);
 
   return (
@@ -28,13 +28,13 @@ const Product = () => {
 
       <article className="product__container__back">
         <div className="product__back">
-          <span onClick={hadleBack}>Go Back</span>
+          <span onClick={handleBack}>Go Back</span>
         </div>
         <div className="product__container">
           <img
             className="product__image"
             src={
-              width > 768
+              width > 1110
                 ? product?.image.desktop
                 : width > 375
                 ? product?.image.tablet
@@ -106,7 +106,7 @@ const Product = () => {
           <div className="product__image-firstandsecond">
             <img
               src={
-                width > 768
+                width > 1110
                   ? product?.gallery.first.desktop
                   : width > 375
                   ? product?.gallery.first.tablet
@@ -116,7 +116,7 @@ const Product = () => {
             />
             <img
               src={
-                width > 768
+                width > 1110
                   ? product.gallery.second.desktop
                   : width > 375
                   ? product.gallery.second.tablet
@@ -128,7 +128,7 @@ const Product = () => {
           <img
             className="product__image-third"
             src={
-              width > 768
+              width > 1110
                 ? product.gallery.third.desktop
                 : width > 375
                 ? product.gallery.third.tablet
@@ -146,7 +146,7 @@ const Product = () => {
             <div key={others.name} className="other__product-item">
               <img
                 src={
-                  width > 768
+                  width > 1110
                   ? others.image.desktop
                   : width > 375
                   ? others.image.tablet

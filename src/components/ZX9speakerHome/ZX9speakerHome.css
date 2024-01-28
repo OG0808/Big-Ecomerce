@@ -97,7 +97,33 @@
   transition: .3s;
 }
 
-@media (width<=768px) {
+
+@media(width<=768px){
+
+  
+  .ZX9speakerHome {
+    width: 689px;
+    height: 720px;
+    flex-shrink: 0;
+    flex-shrink: 0;
+    background: var(--color3);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/home/tablet/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position-y: -250px;
+    background-position-x: center;
+    gap: 64px;
+    transition: .3s;
+  }
+
+}
+
+@media (width<=1110px) {
   .ZX9speakerHome__pattern {
     display: none;
   }

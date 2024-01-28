@@ -12,7 +12,7 @@
   padding-left: 165px;
 }
 
-@media (width<=768px) {
+@media (width<=1110px) {
   .header {
     transition: 0.3s;
     max-width: 1440px;
@@ -38,7 +38,7 @@
 
 }
 
-@media (width<=768px) {
+@media (width<=1110px) {
   .header__content {
     width: 398px;
     height: 346px;
@@ -52,7 +52,7 @@
   }
 }
 
-@media (width<=768px) {
+@media (width<=1110px) {
   .header__new-product {
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@
   margin-bottom: 24px;
 }
 
-@media (width<=768px) {
+@media (width<=1110px) {
   .header__title {
     text-align: center;
   }
@@ -108,7 +108,7 @@
   margin-bottom: 40px;
 }
 
-@media (width<=768px) {
+@media (width<=1110px) {
   .header__description {
     text-align: center;
   }
