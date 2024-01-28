@@ -49,7 +49,7 @@ const Product = () => {
             </span>
             <h2 className="product__name">{product?.name}</h2>
             <p className="product__description">{product?.description}</p>
-            <span className="product__price">$ {product?.price} USD</span>
+            <span className="product__price">$ {product?.price.toLocaleString()} USD</span>
 
             <div className="product__quantity-controls">
               <div className="product__quantity-control">

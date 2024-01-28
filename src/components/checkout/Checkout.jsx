@@ -234,19 +234,19 @@ const Checkout = () => {
           <div className="sumary__total">
             <div>
               <span className="suamry__valors-description">Toal</span>{" "}
-              <span className="sumary__valors">$ {totalPrice}</span>
+              <span className="sumary__valors">$ {totalPrice.toLocaleString()} USD</span>
             </div>
             <div>
               <span className="suamry__valors-description">SHIPPING</span>{" "}
-              <span className="sumary__valors">$ 50</span>
+              <span className="sumary__valors">$ 50 USD</span>
             </div>
             <div>
               <span className="suamry__valors-description">VAT (INCLUDED)</span>
-              <span className="sumary__valors">$ {iva}</span>
+              <span className="sumary__valors">$ {iva.toLocaleString()} USD</span>
             </div>
             <div>
               <span className="suamry__valors-description">GRAND TOTAL</span>{" "}
-              <span className="sumary__valors grandTotal">$ {GrandTotal}</span>
+              <span className="sumary__valors grandTotal">$ {GrandTotal.toLocaleString()} USD</span>
             </div>
 
             <button type="submit" className="suamry__btn">
