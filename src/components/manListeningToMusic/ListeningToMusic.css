@@ -2,10 +2,9 @@
   max-width: 1110px;
   width: 100%;
   height: 588px;
- 
+
   display: flex;
   gap: 125px;
-  
 }
 
 .ListeningToMusic__content {
@@ -59,9 +58,7 @@
   background-image: url("/shared/desktop/image-best-gear.jpg");
 }
 
-
-@media(width<=768px){
-
+@media (width<=768px) {
   .ListeningToMusic__image {
     border-radius: 8px;
     max-width: 689px;
@@ -71,7 +68,6 @@
     background-size: cover;
     background-position: center;
   }
-
 }
 
 @media (width<=1110px) {
@@ -81,10 +77,9 @@
     height: 750px;
     display: flex;
     gap: 125px;
-    
+
     flex-direction: column-reverse;
     align-items: center;
-  
   }
   .ListeningToMusic__image {
     border-radius: 8px;
@@ -114,7 +109,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 25px; /* 166.667% */
-    
   }
 
   .ListeningToMusic__content {
@@ -125,5 +119,51 @@
     flex-direction: column;
     gap: 32px;
     align-items: center;
+  }
+}
+
+@media (width<= 650px) {
+  .ListeningToMusic__image {
+    border-radius: 8px;
+    max-width: 327px;
+    width: 100%;
+    height: 300px;
+    background-image: url("/shared/mobile/image-best-gear.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+  }
+  .ListeningToMusic__title {
+    color: #000;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .ListeningToMusic {
+    max-width: 689px;
+    width: 100%;
+    height: 698px;
+    display: flex;
+    gap: 0px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .ListeningToMusic__description {
+    width: 327px;
+    color: #000;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 166.667% */
+
   }
 }

@@ -36,7 +36,7 @@ const Product = () => {
             src={
               width > 1110
                 ? product?.image.desktop
-                : width > 375
+                : width > 650
                 ? product?.image.tablet
                 : product?.image.mobile
             }
@@ -108,7 +108,7 @@ const Product = () => {
               src={
                 width > 1110
                   ? product?.gallery.first.desktop
-                  : width > 375
+                  : width > 650
                   ? product?.gallery.first.tablet
                   : product?.gallery.first.mobile
               }
@@ -118,7 +118,7 @@ const Product = () => {
               src={
                 width > 1110
                   ? product.gallery.second.desktop
-                  : width > 375
+                  : width > 650
                   ? product.gallery.second.tablet
                   : product.gallery.second.mobile
               }
@@ -130,7 +130,7 @@ const Product = () => {
             src={
               width > 1110
                 ? product.gallery.third.desktop
-                : width > 375
+                : width > 650
                 ? product.gallery.third.tablet
                 : product.gallery.third.mobile
             }
@@ -148,7 +148,7 @@ const Product = () => {
                 src={
                   width > 1110
                   ? others.image.desktop
-                  : width > 375
+                  : width > 650
                   ? others.image.tablet
                   : others.image.mobile
   
@@ -169,6 +169,8 @@ const Product = () => {
           ))}
         </div>
       </article>
+
+
       <div className="product__pages">
         
       <PagesShop />

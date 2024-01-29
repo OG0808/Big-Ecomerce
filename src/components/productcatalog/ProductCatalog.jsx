@@ -26,7 +26,7 @@ const Headphones = () => {
                 src={
                   width > 1110
                     ? data.categoryImage.desktop
-                    : width > 375
+                    : width > 650
                     ? data.categoryImage.tablet
                     : data.categoryImage.mobile
                 }

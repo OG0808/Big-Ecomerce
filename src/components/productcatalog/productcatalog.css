@@ -208,7 +208,7 @@
   }
 }
 
-@media (width<=375px) {
+@media (width<=650px) {
   .headphones__item {
     display: flex;
     flex-direction: column;
