@@ -98,7 +98,9 @@ const Navbar = () => {
                 />
                 <div className="cart__product__info">
                   <span className="cart__product__name">{data.name}</span>
-                  <span className="cart__product__price">$ {data.price.toLocaleString()}</span>
+                  <span className="cart__product__price">
+                    $ {data.price.toLocaleString()}
+                  </span>
                 </div>
                 <div className="cart__product__quantity">
                   <div className="cart__quantity__control">
@@ -138,7 +140,11 @@ const Navbar = () => {
         </section>
       </div>
 
-      <div className={ showMenu ? "navbar__burger-content": "navbar__burger-contentHide" }>
+      <div
+        className={
+          showMenu ? "navbar__burger-content" : "navbar__burger-contentHide"
+        }
+      >
         <div
           className={
             showMenu ? "navbar__burger-menu" : "navbar__burger-menuHide"

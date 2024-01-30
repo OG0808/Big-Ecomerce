@@ -3,11 +3,16 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import "./checkout.css";
 import { validationSchema } from "../validation/Validation";
 import useCartStore from "../../store/cartStore";
+import { string } from "yup";
+import Order from "../order/Order";
+import { useState } from "react";
+import useCartShow from "../../store/useCartShow";
 
 const Checkout = () => {
   const { cartProducts, totalPrice } = useCartStore();
   const iva = (totalPrice * 20) / 100;
   const GrandTotal = totalPrice + 50;
+  const {order, setShowOrder}=useCartShow()
 
   const {
     handleSubmit,
@@ -29,10 +34,17 @@ const Checkout = () => {
     },
   });
 
-  const Submit = (data) => {};
+  const Submit = (data) => {
+    if ((data.City = string)){
+      setShowOrder(true)
+    }
+  };
 
   return (
     <section className="checkout">
+      {
+        order ? <Order/> : ''
+      }
       <form
         onSubmit={handleSubmit(Submit)}
         className="formulario formulario--checkout"
@@ -234,7 +246,9 @@ const Checkout = () => {
           <div className="sumary__total">
             <div>
               <span className="suamry__valors-description">Toal</span>{" "}
-              <span className="sumary__valors">$ {totalPrice.toLocaleString()} USD</span>
+              <span className="sumary__valors">
+                $ {totalPrice.toLocaleString()} USD
+              </span>
             </div>
             <div>
               <span className="suamry__valors-description">SHIPPING</span>{" "}
@@ -242,11 +256,15 @@ const Checkout = () => {
             </div>
             <div>
               <span className="suamry__valors-description">VAT (INCLUDED)</span>
-              <span className="sumary__valors">$ {iva.toLocaleString()} USD</span>
+              <span className="sumary__valors">
+                $ {iva.toLocaleString()} USD
+              </span>
             </div>
             <div>
               <span className="suamry__valors-description">GRAND TOTAL</span>{" "}
-              <span className="sumary__valors grandTotal">$ {GrandTotal.toLocaleString()} USD</span>
+              <span className="sumary__valors grandTotal">
+                $ {GrandTotal.toLocaleString()} USD
+              </span>
             </div>
 
             <button type="submit" className="suamry__btn">

@@ -74,6 +74,7 @@
 .navbar__icon-menu {
   display: none;
   animation: icon_menu 0.3s forwards;
+  cursor: pointer;
 }
 
 @media (width<=1110px) {
